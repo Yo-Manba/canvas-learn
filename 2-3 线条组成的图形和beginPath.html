@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<canvas 
+			id="canvas" 
+			style="border: 1px solid #aaa; display: block; margin: 50px auto;"  
+			width="800" 
+			height="800"
+		>
+			当前浏览器不支持Canvas，请更换浏览器后再试
+		</canvas>
+	</body>
+</html>
+
+<script type="text/javascript">
+	
+	window.onload = function () {
+		var canvas = document.getElementById('canvas')
+		var context = canvas.getContext("2d")
+		
+		// 状态设置
+		context.lineWidth = 10
+		
+		context.beginPath()
+		context.moveTo(100, 300)
+		context.lineTo(480, 300)
+		context.strokeStyle = "#058"
+		context.stroke()
+		
+		
+		context.beginPath()
+		context.moveTo(480, 305)
+		context.lineTo(480, 200)
+		context.lineTo(620, 350)
+		context.lineTo(480, 500)
+		context.lineTo(480, 400)
+		context.strokeStyle = "red"
+		context.stroke()
+		
+		context.beginPath()
+		context.moveTo(485, 400)
+		context.lineTo(100, 400)
+		context.strokeStyle = "green"
+		context.stroke()
+		
+		context.moveTo(100, 620)
+		context.lineTo(700, 620)
+		context.lineTo(650, 600)
+		
+		// 绘制
+		context.stroke()
+	}
+	
+</script>
